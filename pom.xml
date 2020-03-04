@@ -12,6 +12,7 @@
         <module>ad-eureka</module>
         <module>ad-gateway</module>
         <module>luyuni-ad-service</module>
+        <module>ad-show</module>
     </modules>
 
 

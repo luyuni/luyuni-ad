@@ -14,6 +14,10 @@
     <modules>
         <module>ad-common</module>
         <module>ad-sponsor</module>
+        <module>ad-search</module>
+        <module>ad-dashboard</module>
+        <module>ad-binlog-common</module>
+        <module>ad-binlog-kafka</module>
     </modules>
     <packaging>pom</packaging>
 

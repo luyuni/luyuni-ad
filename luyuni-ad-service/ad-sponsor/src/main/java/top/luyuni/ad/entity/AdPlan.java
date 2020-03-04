@@ -56,7 +56,6 @@ public class AdPlan {
 
     public AdPlan(Long userId, String planName,
                   Date startDate, Date endDate) {
-
         this.userId = userId;
         this.planName = planName;
         this.planStatus = CommonStatus.VALID.getStatus();

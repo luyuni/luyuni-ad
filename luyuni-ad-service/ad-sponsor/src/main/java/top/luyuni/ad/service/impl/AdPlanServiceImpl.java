@@ -2,6 +2,7 @@ package top.luyuni.ad.service.impl;
 
 import org.apache.commons.lang.StringUtils;
 import org.springframework.beans.factory.annotation.Autowired;
+import org.springframework.stereotype.Service;
 import org.springframework.transaction.annotation.Transactional;
 import top.luyuni.ad.constant.CommonStatus;
 import top.luyuni.ad.constant.Constants;
@@ -20,6 +21,7 @@ import java.util.Date;
 import java.util.List;
 import java.util.Optional;
 
+@Service
 public class AdPlanServiceImpl implements IAdPlanService {
 
     @Autowired
@@ -55,7 +57,7 @@ public class AdPlanServiceImpl implements IAdPlanService {
         if (!request.validate()) {
             throw new AdException(Constants.ErrorMsg.REQUEST_PARAM_ERROR);
         }
-        List<AdPlan> plans = planRepository.findAllByInAndUserId(request.getIds(), request.getUserId());
+        List<AdPlan> plans = planRepository.findAllByIdInAndUserId(request.getIds(), request.getUserId());
         return plans;
     }
 
